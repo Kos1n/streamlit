@@ -22,17 +22,13 @@ if st.button("Надіслати"):
         st.success("Дані успішно надіслано!")
 
         with st.container(border=True):
-            col_photo, col_info = st.columns([1, 2])
+            if photo is not None:
+                st.image(photo, width=220)
+            else:
+                st.caption("Фото не завантажено")
 
-            with col_photo:
-                if photo is not None:
-                    st.image(photo, use_container_width=True)
-                else:
-                    st.caption("Фото не завантажено")
-
-            with col_info:
-                st.subheader(name)
-                st.write(f"**Вік:** {age}")
-                st.write(f"**Спеціальність:** {specialty}")
-                st.write(f"**Середній бал:** {gpa:.1f}")
-                st.write(f"**Гуртожиток:** {'Так' if dorm else 'Ні'}")
+            st.subheader(name)
+            st.write(f"**Вік:** {age}")
+            st.write(f"**Спеціальність:** {specialty}")
+            st.write(f"**Середній бал:** {gpa:.1f}")
+            st.write(f"**Гуртожиток:** {'Так' if dorm else 'Ні'}")
