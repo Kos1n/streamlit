@@ -5,3 +5,4 @@ networks
 pandas
 scikit-learn
 pypdf
+python-docx
