@@ -3,3 +3,5 @@ matplotlib
 pillow
 networks
 pandas
+scikit-learn
+pypdf
